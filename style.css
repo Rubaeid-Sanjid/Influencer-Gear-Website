@@ -57,14 +57,14 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   width: 475px;
-    height: 475px;
+  height: 475px;
 }
 .banner-photo img {
   position: relative;
   top: 50px;
   right: 10px;
   width: 475px;
-height: 380px;
+  height: 380px;
 }
 .banner-btn {
   border-radius: 41px;
@@ -88,6 +88,11 @@ height: 380px;
   margin: 100px 0;
   text-align: center;
 }
+.cards-section .title {
+  color: #3a3a3a;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
 .cards-collection {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -100,31 +105,48 @@ height: 380px;
   box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
   padding: 15px;
 }
-.cards-collection .card img{
+.cards-collection .card img {
   width: 100%;
 }
-.cards-collection .card .card-content{
+.cards-collection .card .card-content {
   text-align: left;
 }
-.cards-section .card-btn-container{
+.cards-collection .card .card-content .card-title {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.cards-collection .card .card-content .price {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 8px 0;
+}
+.cards-collection .card .card-content .card-description {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.cards-section .card-btn-container {
   text-align: right;
   margin-top: 20px;
 }
-.cards-section .card-btn{
+.cards-section .card-btn {
   border: none;
   background: none;
   color: #e02c6d;
   font-weight: 700;
-cursor: pointer;
+  cursor: pointer;
 }
 
-/*For Mobile device*/
+/* For Mobile device */
 @media screen and (max-width: 576px) {
   .nav-bar {
     flex-direction: column;
     align-items: center;
   }
-  header, .banner, .cards-section, .sponsors{
+  header,
+  .banner,
+  .cards-section,
+  .sponsors {
     padding: 0 20px;
   }
   .nav-links ul {
@@ -132,9 +154,9 @@ cursor: pointer;
   }
   .banner {
     flex-direction: column-reverse;
-  text-align: center;
+    text-align: center;
   }
-  .banner-photo{
+  .banner-photo {
     padding: 20px;
     width: 350px;
     height: 350px;
@@ -145,14 +167,24 @@ cursor: pointer;
     position: relative;
     top: 35px;
   }
-  .section-title{
+  .section-title {
     font-size: 2.5rem;
   }
-  .sponsors-logos{
+  .sponsors-logos {
     flex-wrap: wrap;
     gap: 20px;
   }
-  .cards-collection{
+  .cards-collection {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* For medium device */
+@media screen and (min-width: 576px) and (max-width: 1024px) {
+  header,
+  .banner,
+  .cards-section,
+  .sponsors {
+    padding: 0 50px;
   }
 }
